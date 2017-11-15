@@ -5,22 +5,30 @@ Simple Data service for IOT devices, no auth. no db; memory only
 # Usecase
 
 * IOT devices can concurrently upload to this service with sensor data bundles, a JSON string that looks like this:
+
+
+```
 {
 "device_uuid": "b21ad0676f26439482cc9b1c7e827de4",
 "sensor_type": "temperature",
 "sensor_value": 50,
 "sensor_reading_time": 1510093202
 }
+```
+
 There are 2 valid sensor_types: "humidity" and "temperature".
 
 * Clients can make requests to this service to retrieve sensor data for a given device in a time range with the following JSON 
 bundle: 
+
+```
 {
 "device_uuid": "b21ad0676f26439482cc9b1c7e827de4",
 "sensor_type": "temperature",
 "start_time": 1510093202,
 "end_time" 1510099302
 }
+```
 
 # API
 
@@ -60,7 +68,7 @@ curl -X POST --data "$device_bundle_data_in_JSON_format" http://localhost:8081/i
   "ok"
 }
 ```
-the server should respond with 404 to all other requests not listed above
+The service should respond with 404 to all other requests not listed above
 
 # environment & build
  require Go

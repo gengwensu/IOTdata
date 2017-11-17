@@ -85,6 +85,7 @@ $ go build ../src/github.com/gengwensu/IOTdata/device/iotdevice.go
 
 $ ./iotdevice -url="http://localhost:8081/iotData/add" ...
 
+```
 Usage of input flags:
 
   -duration int
@@ -97,9 +98,10 @@ Usage of input flags:
         default url (default "http://localhost:8081/iotData/add")
   -uuid string
         device uuid (default "device1")
+```
 
 # Running the experiment
-
+```
 $ ./iotdata.exe &
 [1] 9224
 
@@ -203,3 +205,4 @@ results: [
   "sensor_reading_time": 1510933289
  }
 ]
+```

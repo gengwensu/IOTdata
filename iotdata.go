@@ -19,7 +19,7 @@ import (
 type IOTData struct {
 	DeviceUUID  string  `json:"uuid"`
 	DeviceType  string  `json:"type"`
-	SensorValue float32 `json:"sensor_value"`
+	SensorValue float64 `json:"sensor_value"`
 	ReadTime    int64   `json:"sensor_reading_time"`
 }
 
